@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "voice-assistant"
+version = "0.1.0"
+description = "An OS-independent Voice Assistant for your PC!"
+authors = ["krishnasharmak05 <146259706+krishnasharmak05@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+VA = "voice_assistant.src.services.main:main"
+# TODO: Check if the above line is correct or if it should be: "voice_assistant.voice_assistant.src.services.main:main"
